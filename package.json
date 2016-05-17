@@ -1,0 +1,21 @@
+{
+  "name": "ng2-inline-url-loader",
+  "version": "0.1.0",
+  "author": "Mirko Nasato",
+  "description": "Angular 2 template/style URLs loader for Webpack",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "test": "jasmine"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "jasmine": "2.4.1"
+  }
+}
