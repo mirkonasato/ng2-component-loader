@@ -31,7 +31,8 @@ Chain this loader to the transpiler in `webpack.config.js`, e.g. for TypeScript:
 ``` javascript
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts!ng2-component' },
+      { test: /\.component\.ts$/, loader: 'ts!ng2-component' },
+      { test: /\.ts$/, exclude: /\.component\.ts$/, loader: 'ts' },
 ```
 
 ## Limitations
