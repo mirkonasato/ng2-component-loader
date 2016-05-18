@@ -1,6 +1,6 @@
 {
-  "name": "ng2-inline-url-loader",
-  "version": "0.1.0",
+  "name": "ng2-component-loader",
+  "version": "0.1.1",
   "author": "Mirko Nasato",
   "description": "Angular 2 template/style URLs loader for Webpack",
   "licenses": [
@@ -11,6 +11,9 @@
   ],
   "scripts": {
     "test": "jasmine"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   },
   "dependencies": {
     

@@ -24,13 +24,14 @@ const substitutions = [
 ];
 
 module.exports = function(source) {
-  const match = source.match(componentDecorator);
-  if (!match) {
-    return source;
-  }
-  let metadata = match[1];
+  this.cacheable && this.cacheable();
+  const componentMatch = componentDecorator.exec(source);
+  if (!componentMatch) { return source; }
+  let metadata = componentMatch[1];
   for (const substitution of substitutions) {
     metadata = metadata.replace(substitution.pattern, substitution.replacement);
   }
-  return source.replace(match[0], '@Component({' + metadata + '})');
+  return source.substring(0, componentMatch.index) +
+    '@Component({' + metadata + '})' +
+    source.substring(componentMatch.index + componentMatch[0].length);
 };
