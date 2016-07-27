@@ -6,19 +6,19 @@ const componentDecorator = /^@Component\({([\s\S]*?)^}\)/m;
 
 const substitutions = [
   {
-    pattern: /\btemplateUrl:\s*'(.*?)'/,
+    pattern: /\btemplateUrl\s*:\s*'(.*?)'/,
     replacement: 'template: require(\'$1\')'
   },
   {
-    pattern: /\btemplateUrl:\s*"(.*?)"/,
+    pattern: /\btemplateUrl\s*:\s*"(.*?)"/,
     replacement: 'template: require("$1")'
   },
   {
-    pattern: /\bstyleUrls:\s*\[\s*'(.*?)'\s*\]/,
+    pattern: /\bstyleUrls\s*:\s*\[\s*'(.*?)'\s*\]/,
     replacement: 'styles: [require(\'$1\')]'
   },
   {
-    pattern: /\bstyleUrls:\s*\[\s*"(.*?)"\s*\]/,
+    pattern: /\bstyleUrls\s*:\s*\[\s*"(.*?)"\s*\]/,
     replacement: 'styles: [require("$1")]'
   }
 ];
